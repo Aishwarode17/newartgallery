@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Nachung's Art</title>
+</head>
+<body >
+    
+    <div class="container">
+        <div class="navbar">
+        <h2 class="logo">Nachung'sArt</h2>
+        <nav>
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="Testimonial.html">Testimonial</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <img class="menu" src="menu.png" alt="menu">
+            </ul>
+       
+        </nav>
+    </div class="second">
+
+    <div class="row">
+        <div class="col">
+            <div class="text">
+                <h5>Our Moto</h5>
+                <h1>For the love of <b>paper</b>, <b>paint</b> and <b>elegance</b><br><b style="color:red;font-size: medium;">-Chera Nachung</b></h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="gallery">
+            <img height="500px" width="500px" src="landscape2.jpeg" id="gallery" alt="first">
+
+            <ul>
+                <li class="btn">A</li>
+                <li class="btn">B</li>
+                <li class="btn">C</li>
+                <li class="btn">D</li>
+            </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var btn = document.getElementsByClassName("btn");
+    var gallery = document.getElementById("gallery");
+
+    var images = new Array(
+
+        "art1.jpeg",
+        "landscape2.jpeg",
+        "portrait1.jpeg",
+        "portrait3.jpeg"
+
+    );
+    
+    for(let i = 0; i<btn.length; i++){
+        btn[i].onclick =function(){
+
+            gallery.src = images[i];
+            let current= document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace("active", "");
+            this.className += 'active';
+        }
+    }
+</script>
+
+</body>
+</html>

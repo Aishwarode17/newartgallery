@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <link href="gallery.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+
+    <title>Nachung's art == gallery</title>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div div class="navbar">
+        <h2 class="logo">Nachung'sArt</h2>
+        <nav>
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="Testimonial.html">Testimonial</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <img class="menu" src="menu.png" alt="menu">
+            </ul>
+       
+        </nav>
+    </div>
+    <div class="sidenav">
+        <aside>
+            <ul>
+            <li><div class="icons"><i class="fa fa-heart"></div></i><div class="linktitle"><a href="gallery.html">Portrait</a></div></li>
+            <li><div class="icons"><i class="fa fa-align-justify"></i></div><div class="linktitle"><a href="scenery.html">Landscape</a></div></li>
+            <li><div class="icons"><i class="fa fa-group"></i></div><div class="linktitle"><a href="Digital.html">Digital Art</a></div></li>
+            <li><div class="icons"><i class="fa fa-user"></i></div><div class="linktitle"><a href="Cartoon.html">Cartoon</a></div></li>
+            <li><div class="icons"><i class="fa fa-user"></i></div><div class="linktitle"><a href="handicraft.html">Handicraft</a></div></li>
+            <li><div class="icons"><i class="fa fa-user"></i></div><div class="linktitle"><a href="scripture.html">Scripture</a></div></li>
+            <li><div class="icons"><i class="fa fa-user"></i></div><div class="linktitle"><a href="Abstract.html">Abstract</a></div></li>
+            <li><div class="icons"><i class="fa fa-user"></i></div><div class="linktitle"><a href="Doodle.html">Doodle</a></div></li>
+            <li><div class="icons"><i class="fa fa-user"></i></div><div class="linktitle"><a href="upload.html">Upload your art</a></div></li>
+            </ul>
+            </aside>
+    </div>
+
+    <div class="cards">
+        <div>
+            <main class="grid">
+              <article>
+                <img src="sc1.jpg" alt="Sample photo" id="k">
+                <div class="text" style = "text-align: center;display:flex;justify-content:center;flex-direction: column;">
+                  <h3>Your art</h3>
+                  <input type="file" id="img" name="img" accept="image/*" style="margin-left: 30px;" onchange="loadfile(event)">
+
+                </div>
+              </article>
+              
+            </main>
+          </div>
+    </div>
+   
+    </div>
+
+
+    <script>
+
+            let upl = document.querySelector("#img");
+
+            let img = document.querySelector("#k");
+
+            var loadfile = function(event) {
+                var output = document.getElementById('k');
+                output.src = URL.createObjectURL(event.target.files[0]);
+                output.onload = function() {
+                URL.revokeObjectURL(output.src) // free memory
+                }
+            };
+
+      </script
+
+
+</body>
+</html>
